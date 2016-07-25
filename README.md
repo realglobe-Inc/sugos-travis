@@ -97,6 +97,7 @@ Available functions
 | Signature | Description |
 | ---- | ----------- |
 | `.publishNpm(options) -> Promise` | Travis CI 上でパッチバージョンを上げて git push と npm publish する。 |
+| `.pushOtherRepository(options) -> Promise` | Travis CI 上でパッチバージョンを上げて git push と npm publish する。 |
 
 
 <!-- Section from "doc/guides/03.Functions.md.hbs" End -->
