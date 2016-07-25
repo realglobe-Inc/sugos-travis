@@ -1,0 +1,31 @@
+{
+  "name": "sg-travis",
+  "version": "1.0.0",
+  "description": "Script for Travis CI",
+  "main": "lib",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/realglobe-Inc/sg-travis.git"
+  },
+  "keywords": [
+    "Travis"
+  ],
+  "author": "FujiHaruka",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/realglobe-Inc/sg-travis/issues"
+  },
+  "homepage": "https://github.com/realglobe-Inc/sg-travis#readme",
+  "dependencies": {
+    "ape-tasking": "^4.0.7",
+    "co": "^4.6.0",
+    "defaults": "^1.0.3"
+  },
+  "devDependencies": {
+    "ape-tmpl": "^5.0.14",
+    "coz": "^6.0.14"
+  }
+}
