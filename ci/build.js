@@ -13,6 +13,7 @@ const coz = require('coz')
 
 runTasks('build', [
   () => coz.render([
-    'lib/.*.bud'
+    'lib/.*.bud',
+    'test/.*.bud'
   ])
 ], true)
