@@ -14,7 +14,7 @@
     "Travis"
   ],
   "author": "FujiHaruka",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/realglobe-Inc/sg-travis/issues"
   },
@@ -28,5 +28,12 @@
     "ape-testing": "^4.0.2",
     "ape-tmpl": "^5.0.14",
     "coz": "^6.0.14"
+  },
+  "engines": {
+    "node": ">=6",
+    "npm": ">=3"
+  },
+  "publishConfig": {
+    "registry": "https://realglobe.artifactoryonline.com/realglobe/api/npm/npm-local"
   }
 }
