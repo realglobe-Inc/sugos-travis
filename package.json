@@ -1,19 +1,19 @@
 {
   "name": "sg-travis",
   "version": "1.0.0",
-  "description": "Script for Travis CI",
+  "description": "Scripts for Travis CI",
   "main": "lib",
   "scripts": {
     "test": "./ci/test.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/realglobe-Inc/sg-travis.git"
-  },
+  "repository": "realglobe-Inc/sg-travis",
   "keywords": [
     "Travis"
   ],
-  "author": "FujiHaruka",
+  "author": {
+    "name": "FujiHaruka",
+    "email": "fujiharuka@realglobe.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/realglobe-Inc/sg-travis/issues"
