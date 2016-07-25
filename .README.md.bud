@@ -1,0 +1,47 @@
+/**
+ * Bud file for README.md
+ */
+
+'use strict'
+
+const { readmeMdBud } = require('ape-tmpl')
+const { commentsInFile } = require('ape-doc')
+const stringcase = require('stringcase')
+const pkg = require('./package.json')
+const expandglob = require('expandglob')
+
+module.exports = readmeMdBud({
+  pkg,
+  repo: pkg.repository,
+  sections: 'doc/guides/*.md.hbs',
+  badges: {
+    travis: false,
+    travisCom: true,
+    travisComToken: 'aeFzCpBZebyaRijpCFmm',
+    codeclimate: false,
+    codeclimateCoverage: false,
+    gemnasium: false,
+    npm: true,
+    standard: true
+  },
+  overview: 'doc/overview.md',
+  links: require('./doc/links'),
+  vars: {
+    funcs: expandglob.sync('lib/*.js')
+      .filter((filename) => !/index\.js$/.test(filename))
+      .map((filename) => {
+        let [comments] = commentsInFile(filename)
+        let [func] = comments.function
+        return {
+          name: func.name,
+          description: comments.description,
+          params: comments.param,
+          returns: comments.returns[ 0 ]
+        }
+      })
+  }
+})
+
+if (!module.parent) {
+  require('coz').render(__filename)
+}

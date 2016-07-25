@@ -25,9 +25,11 @@
     "defaults": "^1.0.3"
   },
   "devDependencies": {
+    "ape-doc": "^2.0.4",
     "ape-testing": "^4.0.2",
     "ape-tmpl": "^5.0.14",
-    "coz": "^6.0.14"
+    "coz": "^6.0.14",
+    "expandglob": "^3.0.3"
   },
   "engines": {
     "node": ">=6",
