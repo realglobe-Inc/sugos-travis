@@ -8,6 +8,6 @@
 
 process.chdir(`${__dirname}/..`)
 
-const {publish} = require('../lib')
+const {publishNpm} = require('../lib')
 
-publish({})
+publishNpm({})
