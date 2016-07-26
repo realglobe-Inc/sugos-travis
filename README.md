@@ -96,12 +96,10 @@ Available functions
 
 | Signature | Description |
 | ---- | ----------- |
-| `.createNpmrc(options) -> Promise` | Travis で HOME に .npmrc を作る。
-このスクリプトは npm install しなくても走るようにしてある。 |
+| `.createNpmrc(options) -> Promise` | Travis で HOME に .npmrc を作る。このスクリプトは before_install で使うので npm install しなくても走るようにしてある。 |
 | `.publishNpm(options) -> Promise` | Travis CI 上でパッチバージョンを上げて git push と npm publish する。 |
-| `.pushOtherRepository(options) -> Promise` | Travis CI 上でパッチバージョンを上げて git push と npm publish する。 |
-| `.setEnv(options) -> Promise` | Travis の環境変数を設定する。
-sugos-secrets と travis cli が必要。 |
+| `.pushOtherRepository(options) -> Promise` | Travis CI 上で他のリポジトリに空 git push する |
+| `.setEnv(options) -> Promise` | Travis の環境変数を設定する。 |
 
 
 <!-- Section from "doc/guides/03.Functions.md.hbs" End -->
