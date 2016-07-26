@@ -43,7 +43,7 @@ describe('publish-npm', function () {
   it('Publish npm', () => co(function * () {
     let patchVersionBefore = patchVersion()
     yield publishNpm()
-    yield asleep(5000)
+    yield asleep(10000)
     let patchVersionAfter = patchVersion()
     assert.equal(patchVersionAfter, patchVersionBefore + 1)
   }))
