@@ -7,6 +7,7 @@
 const pushOtherRepository = require('../lib/push_other_repository.js')
 const {execSync} = require('child_process')
 const assert = require('assert')
+const asleep = require('asleep')
 const request = require('request-promise')
 const co = require('co')
 const {GIT_USER, GIT_PASSWORD} = process.env
@@ -27,6 +28,7 @@ describe('push-other-repository', function () {
     yield pushOtherRepository({
       repository: 'sg-travis-mock-project-01'
     })
+    yield asleep(10000)
     let commitsAfter = yield countCommits()
     assert.equal(commitsAfter, commitsBefore + 1)
   }))
