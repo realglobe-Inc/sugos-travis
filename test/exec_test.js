@@ -11,17 +11,10 @@ const co = require('co')
 describe('exec', function () {
   this.timeout(3000)
 
-  before(() => co(function * () {
-
-  }))
-
-  after(() => co(function * () {
-
-  }))
-
   it('Exec', () => co(function * () {
-
+    let hoge = exec('echo hoge', {stdio: 'pipe'}).toString().trim()
+    assert.equal(hoge, 'hoge')
   }))
 })
 
-/* global describe, before, after, it */
+/* global describe, it */
