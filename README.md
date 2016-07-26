@@ -98,6 +98,8 @@ Available functions
 | ---- | ----------- |
 | `.publishNpm(options) -> Promise` | Travis CI 上でパッチバージョンを上げて git push と npm publish する。 |
 | `.pushOtherRepository(options) -> Promise` | Travis CI 上でパッチバージョンを上げて git push と npm publish する。 |
+| `.setEnv(options) -> Promise` | Travis の環境変数を設定する。
+sugos-secrets と travis cli が必要。 |
 
 
 <!-- Section from "doc/guides/03.Functions.md.hbs" End -->

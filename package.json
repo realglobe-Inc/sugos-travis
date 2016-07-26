@@ -25,6 +25,7 @@
     "co": "^4.6.0",
     "defaults": "^1.0.3",
     "file-exists": "^1.0.0",
+    "hasbin": "^1.2.3",
     "request": "^2.74.0",
     "request-promise": "^4.0.2"
   },
