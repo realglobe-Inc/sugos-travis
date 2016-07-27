@@ -11,5 +11,7 @@ install:
 before_script:
 - npm link .
 script:
-- ./ci/test.js
-- ./ci/travis_publish.js
+- "./ci/test.js"
+- "./ci/travis/publish.js"
+env:
+  secure: clzLPtPtrxOEWSr3dLT9f+AVxrYKd7L1wCq3yuW1DWE9kCbwHZs9KRgpgPrE8COPNZQ1OYxa80IAw+dNMLe/IlJGgYh4T4nfkPt/oajcOJn6znxjAGLwHidSq3ba+7Y0A0PBXC6t9RSQodv1w2nLVDt8AyeckCY2bdD2nxdGXtY1VO245Z+EbGUWTZ+A62octEM20Mlay3jvmIP0/DfG5WK4z5eW9Wq5DvD4/LI+FUckClbTtYzpYee2Yg1bw1zQPEOMPotG8ROBgEyw4QKicTtRMHnXtxf9LlHSCy0I0DpqMPM3PDfejxqORsuZRsbCXuEmzMktEqBQobuSGG80I+efKrbgmsJESyYV4d4pYPE08sEn7qubRcmRl+wW0tR5Ac31Cm1YCs31mX5r1W31HBcu6MO6uG+AeoJNf6M70zQaoi2R3/bTUarBLVXvBxzFcwq9mkyGaLV+7i2+4h0lqNqh9YVTNuShwX1WWPdq9tsM9AKCi5SapDzW4C5mkJdM8vcgZOv3Hk3WxbmyzRlyGGSx/w0fL+0L1oKcvbJpXiI0HAOcJDoxHpbXw6VmXhF933NacSwE68VRldq2HKNKz2UE9x8y+cNzHUl1hVVi47ijqFnKhxWmYkUXEH0yQ0UwtUB7wLNBBwUzQwUiyM7qd2hdePB2jVNeTFwwTnxGuiQ=
