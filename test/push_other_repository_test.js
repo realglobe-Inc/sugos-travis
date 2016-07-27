@@ -28,7 +28,7 @@ describe('push-other-repository', function () {
     yield pushOtherRepository({
       repository: 'sg-travis-mock-project-01'
     })
-    yield asleep(10000)
+    yield asleep(15000)
     let commitsAfter = yield countCommits()
     assert.equal(commitsAfter, commitsBefore + 1)
   }))
