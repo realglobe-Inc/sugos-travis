@@ -96,7 +96,6 @@ Available functions
 
 | Signature | Description |
 | ---- | ----------- |
-| `.createNpmrc(options) -> Promise` | Travis で HOME に .npmrc を作る。このスクリプトは before_install で使うので npm install しなくても走るようにしてある。 |
 | `.publishNpm(options) -> Promise` | Travis CI 上でパッチバージョンを上げて git push と npm publish する。ただし .npmignore に記載されたファイルのみ変更の場合は無視する。 |
 | `.pushOtherRepository(options) -> Promise` | Travis CI 上で他のリポジトリに空 git push する。ただし .npmignore に記載されたファイルの変更のみの場合は無視する。 |
 | `.setEnv(options) -> Promise` | Travis の環境変数を設定する。 |
