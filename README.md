@@ -98,10 +98,30 @@ Available functions
 | ---- | ----------- |
 | `.publishNpm(options) -> Promise` | Travis CI 上でパッチバージョンを上げて git push と npm publish する。ただし .npmignore に記載されたファイルのみ変更の場合は無視する。 |
 | `.pushOtherRepository(options) -> Promise` | Travis CI 上で他のリポジトリに空 git push する。ただし .npmignore に記載されたファイルの変更のみの場合は無視する。 |
-| `.setEnv(options) -> Promise` | Travis の環境変数を設定する。 |
+| `.setEnv(options) -> Promise` | Travis の環境変数を設定する。暗号化された環境変数を.travis.ymlに書く。 |
 
 
 <!-- Section from "doc/guides/03.Functions.md.hbs" End -->
+
+<!-- Section from "doc/guides/04.CLI.md.hbs" Start -->
+
+<a name="section-doc-guides-04-c-l-i-md"></a>
+
+CLI
+----
+
+```bash
+$ npm install sg-travis -g
+```
+
+使い方は
+
+```bash
+$ sg-travis --help
+```
+
+
+<!-- Section from "doc/guides/04.CLI.md.hbs" End -->
 
 
 <!-- Sections Start -->

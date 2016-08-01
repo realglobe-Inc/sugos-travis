@@ -1,0 +1,9 @@
+
+
+# SUGOS
+.*
+tmp
+ci
+doc
+example
+test
