@@ -39,7 +39,8 @@
     "ape-testing": "^4.0.2",
     "ape-tmpl": "^5.0.14",
     "coz": "^6.0.14",
-    "expandglob": "^3.0.3"
+    "expandglob": "^3.0.3",
+    "mkdirp": "^0.5.1"
   },
   "engines": {
     "node": ">=6",
