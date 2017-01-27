@@ -2,10 +2,9 @@ language: node_js
 node_js:
 - '6'
 before_install:
-- echo "registry = https://realglobe.artifactoryonline.com/realglobe/api/npm/npm-virtual" > $HOME/.npmrc
-- curl -u${NPM_USER}:${NPM_PASSWORD} "https://realglobe.artifactoryonline.com/realglobe/api/npm/auth" >> $HOME/.npmrc
-- cat $HOME/.npmrc
-- npm install mocha -g
+- npm i npm-cli-login -g
+- echo "NPM_USER=${NPM_USER}"
+- npm-cli-login -u "${NPM_USER}" -p "${NPM_PASSWORD}" -e "${NPM_EMAIL}"
 install:
 - npm install
 before_script:
@@ -14,4 +13,4 @@ script:
 - "./ci/test.js"
 - "./ci/travis/publish.js"
 env:
-  secure: clzLPtPtrxOEWSr3dLT9f+AVxrYKd7L1wCq3yuW1DWE9kCbwHZs9KRgpgPrE8COPNZQ1OYxa80IAw+dNMLe/IlJGgYh4T4nfkPt/oajcOJn6znxjAGLwHidSq3ba+7Y0A0PBXC6t9RSQodv1w2nLVDt8AyeckCY2bdD2nxdGXtY1VO245Z+EbGUWTZ+A62octEM20Mlay3jvmIP0/DfG5WK4z5eW9Wq5DvD4/LI+FUckClbTtYzpYee2Yg1bw1zQPEOMPotG8ROBgEyw4QKicTtRMHnXtxf9LlHSCy0I0DpqMPM3PDfejxqORsuZRsbCXuEmzMktEqBQobuSGG80I+efKrbgmsJESyYV4d4pYPE08sEn7qubRcmRl+wW0tR5Ac31Cm1YCs31mX5r1W31HBcu6MO6uG+AeoJNf6M70zQaoi2R3/bTUarBLVXvBxzFcwq9mkyGaLV+7i2+4h0lqNqh9YVTNuShwX1WWPdq9tsM9AKCi5SapDzW4C5mkJdM8vcgZOv3Hk3WxbmyzRlyGGSx/w0fL+0L1oKcvbJpXiI0HAOcJDoxHpbXw6VmXhF933NacSwE68VRldq2HKNKz2UE9x8y+cNzHUl1hVVi47ijqFnKhxWmYkUXEH0yQ0UwtUB7wLNBBwUzQwUiyM7qd2hdePB2jVNeTFwwTnxGuiQ=
+  secure: "O/HujJY0HZFJTHbtw9+c2E2RPWa9zzbZ7H8VZDGXwf/lwm76sCtGjPIzfwO/NZgyxv3C+L+l6CCtf1viuc0r4TDRL8+UHUYlz4bilxcVybrMIG4wL5d2LiBEE2NYTRAy2pQtmn0Tss5fTuYVmH6QcKteob8IGfAMf31e3rU0/PYWzMRoO1GQ62XGOkKnQYgWMWbMR0DawyunvlDgrvQUkQqpVyqh+YSndJNrIky7eihhNU/C5gl6J89q4j638WITiWpRC6vUUi93kEtnyz4tgBD5eBXENN6Tn4iaXDhPb/Ie6Ei7DBJjlW998NLTo+CE4aq1v2r8VF5Z0LiQS5zv2KbwKtwZeLH2xqKk/BuKirgYYuCC3Jvc/m7TGSFHax+EWB3hBdynyN2c0FacgnNuOgbsSnd4TJqgTCgRz8LjyBAd3skROCtI3rWhG7NHa18XN6adnj7dP9DlKjzt8kpmjw6veVaFdg87XcqG/+uvDjskuHKciBLuonNeqdb2NY2mQQHc/UQ0+uOOVR46w4ABjIjpbssizvfcUt9M6lW3wtXyPCxNHud9Er4PAePalA5tkzzkeqdS0cuc5RudUnbXTUzUmX82LO502DGw2+BfinbokXHeUwCj3Pynk9QDcXS9lq+yucTWrGPpJFXLwL+l9rqvDm4RDn+z1nS5GnT4s/U="

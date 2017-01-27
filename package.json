@@ -7,17 +7,19 @@
     "sg-travis": "./bin/sg-travis.js"
   },
   "scripts": {
-    "test": "./ci/test.js"
+    "test": "node ./ci/test.js",
+    "prepare": "node ./ci/build.js"
   },
   "repository": "realglobe-Inc/sg-travis",
   "keywords": [
+    "SUGOS",
     "Travis"
   ],
   "author": {
     "name": "FujiHaruka",
     "email": "fujiharuka@realglobe.com"
   },
-  "license": "MIT",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/realglobe-Inc/sg-travis/issues"
   },
@@ -35,17 +37,16 @@
     "request-promise": "^4.0.2"
   },
   "devDependencies": {
+    "aglob": "^1.1.1",
+    "amocha": "^1.0.16",
     "ape-doc": "^2.0.4",
-    "ape-testing": "^4.0.2",
     "ape-tmpl": "^5.0.14",
     "coz": "^6.0.14",
-    "expandglob": "^3.0.3",
-    "hasbin": "^1.2.3",
     "mkdirp": "^0.5.1"
   },
   "engines": {
     "node": ">=6",
-    "npm": ">=3"
+    "npm": ">=4"
   },
   "publishConfig": {
     "registry": "https://realglobe.artifactoryonline.com/realglobe/api/npm/npm-local"
