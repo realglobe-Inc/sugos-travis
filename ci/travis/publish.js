@@ -1,14 +1,11 @@
 #!/usr/bin/env node
 
 /**
- * Set environment variables in Travis CI
+ * Publish npm package
  */
 
 process.chdir(`${__dirname}/../..`)
 
-const { setEnv } = require('sg-travis')
-const { PublicRepo } = setEnv.presets
+const { publishNpm } = require('../../lib')
 
-setEnv({
-  values: PublicRepo
-})
+publishNpm({})

@@ -7,5 +7,8 @@
 process.chdir(`${__dirname}/../..`)
 
 const { setEnv } = require('../../lib')
+const { PublicRepo } = setEnv.presets
 
-setEnv({})
+setEnv({
+  values: PublicRepo
+})
