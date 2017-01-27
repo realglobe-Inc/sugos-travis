@@ -8,9 +8,10 @@ const publishNpm = require('../lib/publish_npm.js')
 const setGithubConfig = require('../lib/util/set_github_config.js')
 const assert = require('assert')
 const asleep = require('asleep')
-const {execSync} = require('child_process')
+const { execSync } = require('child_process')
 const co = require('co')
-const {join} = require('path')
+const { join } = require('path')
+const { TRAVIS } = process.env
 
 describe('publish-npm', function () {
   this.timeout(60000)
@@ -21,6 +22,9 @@ describe('publish-npm', function () {
    * Clone sg-travis-mock-project-01
    */
   before(() => co(function * () {
+    if (TRAVIS) {
+      return
+    }
     process.chdir(workingDir)
     if (process.env.CI) {
       setGithubConfig()
@@ -41,8 +45,11 @@ describe('publish-npm', function () {
   }))
 
   it('Publish npm', () => co(function * () {
+    if (TRAVIS) {
+      return
+    }
     let patchVersionBefore = patchVersion()
-    yield publishNpm({force: true})
+    yield publishNpm({ force: true })
     yield asleep(10000)
     let patchVersionAfter = patchVersion()
     assert.equal(patchVersionAfter, patchVersionBefore + 1)
@@ -51,12 +58,12 @@ describe('publish-npm', function () {
 
 function patchVersion () {
   let version = execSync('npm view sg-travis-mock-project-01 version').toString().trim()
-  let patch = Number(version.split('.')[2])
+  let patch = Number(version.split('.')[ 2 ])
   return patch
 }
 
 function execSilent (command, options = {}) {
-  return execSync(command, Object.assign({stdio: 'ignore'}, options))
+  return execSync(command, Object.assign({ stdio: 'ignore' }, options))
 }
 
 /* global describe, before, after, it */
