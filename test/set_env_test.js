@@ -37,6 +37,9 @@ describe('set-env', function () {
         foo: 'bar'
       },
       target: filename
+    }).catch((err) => {
+      console.error(err)
+      // Just ignore error
     })
   }))
 })
