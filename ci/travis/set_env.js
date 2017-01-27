@@ -6,7 +6,7 @@
 
 process.chdir(`${__dirname}/../..`)
 
-const { setEnv } = require('sg-travis')
+const { setEnv } = require('../../lib')
 const { PublicRepo } = setEnv.presets
 
 setEnv({
