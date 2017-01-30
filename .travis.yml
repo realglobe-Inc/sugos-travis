@@ -5,6 +5,7 @@ before_install:
 - npm i npm-cli-login -g
 - npm-cli-login -u "${NPM_USER}" -p "${NPM_PASSWORD}" -e "${NPM_EMAIL}"
 - npm who
+- cat ~/.npmrc
 install:
 - npm install
 before_script:
