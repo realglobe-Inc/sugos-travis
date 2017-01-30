@@ -20,12 +20,12 @@ describe('push-other-repository', function () {
   }))
 
   after(() => co(function * () {
-    execSync('rm -rf /tmp/sg-travis-mock-project-01', {stdio: 'inherit'})
+    execSync('rm -rf /tmp/sugos-travis-mock-project-01', {stdio: 'inherit'})
   }))
 
   it('Push other repository', () => co(function * () {
     yield pushOtherRepository({
-      repository: 'sg-travis-mock-project-01',
+      repository: 'sugos-travis-mock-project-01',
       force: true
     })
     yield asleep(3000)
@@ -38,8 +38,8 @@ describe('push-other-repository', function () {
  */
 function validateCommit () {
   return co(function * () {
-    let sha = execSync('git rev-parse HEAD', {cwd: '/tmp/sg-travis-mock-project-01'}).toString().trim()
-    let apiUrl = `https://api.github.com/repos/realglobe-Inc/sg-travis-mock-project-01/commits/${sha}`
+    let sha = execSync('git rev-parse HEAD', {cwd: '/tmp/sugos-travis-mock-project-01'}).toString().trim()
+    let apiUrl = `https://api.github.com/repos/realglobe-Inc/sugos-travis-mock-project-01/commits/${sha}`
     let auth = (new Buffer(`${GIT_USER}:${GIT_PASSWORD}`)).toString('base64')
     const res = yield request({
       uri: apiUrl,

@@ -7,7 +7,7 @@ const { setEnv } = require('../lib')
 
 commander
   .command('init')
-  .description('ci/travis 下に sg-travis 関係のCIコマンドファイルを置く')
+  .description('ci/travis 下に sugos-travis 関係のCIコマンドファイルを置く')
   .action(init)
 
 commander
@@ -23,7 +23,7 @@ commander
 commander.parse(process.argv)
 
 /**
- * ci/travis 下に sg-travis 関係のコマンドファイルを置く
+ * ci/travis 下に sugos-travis 関係のコマンドファイルを置く
  */
 function init () {
   let travisPath = join(__dirname, '../src/travis')

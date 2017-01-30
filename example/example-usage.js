@@ -2,6 +2,6 @@
 
 'use strict'
 
-const sgTravis = require('sg-travis')
+const sugosTravis = require('sugos-travis')
 
-sgTravis.publishNpm({})
+sugosTravis.publishNpm({})

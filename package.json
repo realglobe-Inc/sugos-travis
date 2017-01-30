@@ -1,16 +1,16 @@
 {
-  "name": "sg-travis",
+  "name": "sugos-travis",
   "version": "1.1.40",
   "description": "Scripts for Travis CI",
   "main": "lib",
   "bin": {
-    "sg-travis": "./bin/sg-travis.js"
+    "sugos-travis": "./bin/sugos-travis.js"
   },
   "scripts": {
     "test": "node ./ci/test.js",
     "prepare": "node ./ci/build.js"
   },
-  "repository": "realglobe-Inc/sg-travis",
+  "repository": "realglobe-Inc/sugos-travis",
   "keywords": [
     "SUGOS",
     "Travis"
@@ -21,9 +21,9 @@
   },
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/realglobe-Inc/sg-travis/issues"
+    "url": "https://github.com/realglobe-Inc/sugos-travis/issues"
   },
-  "homepage": "https://github.com/realglobe-Inc/sg-travis#readme",
+  "homepage": "https://github.com/realglobe-Inc/sugos-travis#readme",
   "dependencies": {
     "ape-tasking": "^4.0.7",
     "asleep": "^1.0.3",
