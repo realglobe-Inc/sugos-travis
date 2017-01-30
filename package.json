@@ -1,6 +1,6 @@
 {
   "name": "sugos-travis",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Scripts for Travis CI",
   "main": "lib",
   "bin": {
